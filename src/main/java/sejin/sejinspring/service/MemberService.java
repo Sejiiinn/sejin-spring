@@ -1,5 +1,7 @@
 package sejin.sejinspring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import sejin.sejinspring.domain.Member;
 import sejin.sejinspring.repository.MemberRepository;
 import sejin.sejinspring.repository.MemoryMemberRepository;
@@ -7,9 +9,11 @@ import sejin.sejinspring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
